@@ -37,7 +37,7 @@ const Contacts = () => {
 
   const fetchTestimonials = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/testimonials');
+      const response = await axios.get('https://api.arcdatum.com/api/testimonials');
       setTestimonials(response.data);
       setLoading(false);
     } catch (error) {
@@ -108,7 +108,7 @@ const Contacts = () => {
       formData.append('key', fileKey);
 
       // Upload to your storage server
-      const response = await axios.post('http://localhost:5005/api/uploads', formData, {
+      const response = await axios.post('https://ftp.arcdatum.com/api/uploads', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -156,7 +156,7 @@ const Contacts = () => {
         video_url: videoUrl
       };
 
-      await axios.post('http://localhost:5000/api/testimonials', testimonialToSubmit);
+      await axios.post('https://api.arcdatum.com/api/testimonials', testimonialToSubmit);
       fetchTestimonials(); // Refresh the list
       handleClose(); // Close modal
       setNewTestimonial({ // Reset form

@@ -19,7 +19,7 @@ const Team = () => {
   useEffect(() => {
     const fetchResponses = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/responses', {
+        const response = await fetch('https://api.arcdatum.com/api/responses', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }

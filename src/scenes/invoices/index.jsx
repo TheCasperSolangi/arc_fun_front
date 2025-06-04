@@ -24,8 +24,8 @@ import AddIcon from "@mui/icons-material/Add";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
-const API_BASE_URL = "http://localhost:5000/api";
-const STORAGE_SERVER_URL = "http://localhost:5005/api/uploads";
+const API_BASE_URL = "https://api.arcdatum.com/api";
+const STORAGE_SERVER_URL = "https://ftp.arcdatum.com/api/uploads";
 
 const Invoices = () => {
   const theme = useTheme();
